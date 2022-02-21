@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Maven Pro', sans-serif;
+    background-color: cornflowerblue;
 }
 
 * {
@@ -72,11 +73,33 @@ span:hover {
     transition: 0.5s;
 }
 
-#gridwrap {
-    display: grid;
-    grid-template-areas: 
-    "fw ti"
-    "fw se"
-    ;
+#searchwrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
 }
 
+#searchwrap div {
+    display: flex;
+    margin-top: 200px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+#flexwrap span, menu {
+    padding-top: 30px;
+}
+
+#search {
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#searchwrap h1 {
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+}
