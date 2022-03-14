@@ -121,3 +121,18 @@ input {
     outline: none;
   }
 
+  /* ------------------ */
+
+  #profile {
+    font-family: 'Maven Pro', sans-serif;
+    background-image: url("https://www.leaguesplash.com/wp-content/uploads/2013/09/OriginalGragas.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  
+
+  
