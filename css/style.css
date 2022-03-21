@@ -2,13 +2,18 @@
 
 #homepage {
     font-family: 'Maven Pro', sans-serif;
-    background-image: url("https://www.leaguesplash.com/wp-content/uploads/2013/09/Yorick-Classic.jpg");
-    background-position: center;
-    background-size: cover;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
+#home_backround {
+    background-position: center;
+    background-size: cover;
+    z-index: -100;
+    position: absolute;
+    filter: brightness(0.8);
+}   
 
 
 * {
@@ -24,8 +29,7 @@
     #flexwrap {
         display: flex;
         position: fixed;
-        background: rgba(255,255,255,0.5);
-        backdrop-filter: saturate(180%) blur(20px);
+        background: transparent;
         width: 56px;
         height: 100vh;
         align-items: flex-start;
@@ -34,7 +38,6 @@
         flex-direction: row;
         justify-content: center;
     }
-
         #flexwrap:hover {
             align-items: flex-start;
             width: 140px;
@@ -123,15 +126,83 @@
 
   /* ------------------ */
 
-  #profile {
-    font-family: 'Maven Pro', sans-serif;
-    background-image: url("https://www.leaguesplash.com/wp-content/uploads/2013/09/OriginalGragas.jpg");
+#profile_backround {
     background-position: center;
     background-size: cover;
+    position: absolute;
+    z-index: -100;
+    filter: brightness(0.8);
+
+}
+
+  
+  #profile {
+    font-family: 'Maven Pro', sans-serif;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
+
   }
+
+  #textwrap span a {
+    text-decoration: none;
+    color: white;
+}
+
+#textwrap span a:hover {
+    color: lightgray;
+}
+
+.profile_wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "pr na na na na"
+    "ra ra ra ra ra"
+    "ma ma ma ma ma"
+    ;
+    padding: 400px;
+    padding-top: 100px;
+}
+
+#profile_pic {
+    background-image: url('http://ddragon.leagueoflegends.com/cdn/12.4.1/img/profileicon/907.png');
+    grid-area: pr;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#name {
+    grid-area: na;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    font-size: 7em;
+    color: white;
+ 
+
+}
+
+#rank {
+    grid-area: ra;
+    color: white;
+    font-size: 4em;
+    display: flex;
+    margin-left: 25.5%;
+    align-self: center;
+    
+}
+
+#rank_image {
+    grid-area: ra;
+    height: 200px;
+    align-self: center;
+
+}
 
   
 
