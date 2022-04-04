@@ -5,6 +5,7 @@
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
+    background: rgb(240, 240, 240);
 }
 
 #home_backround {
@@ -101,7 +102,7 @@
 
         #title {
             font-size: 10em;
-            color: white;
+            color: black;
         }
 
             #title:hover {
@@ -131,7 +132,6 @@
     background-size: cover;
     position: absolute;
     z-index: -100;
-    filter: brightness(0.8);
 
 }
 
@@ -141,7 +141,8 @@
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
-
+    background: rgba(240, 240, 240, 1);
+    color: black;
   }
 
   #textwrap span a {
@@ -155,8 +156,8 @@
 
 .profile_wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 200px 200px 600px;
+    grid-template-columns: 150px 200px 200px 1fr 1fr;
+    grid-template-rows: 150px 200px 600px;
     grid-template-areas:
     "pr na na rp rp"
     "ra ra up rp rp"
@@ -166,7 +167,7 @@
     height: 100%;
     position: absolute;
     z-index: 100;
-    color: lightskyblue;
+    color: black;
     left: 6%;
 }
 
@@ -175,26 +176,75 @@
     background: rgba(39, 39, 49, 0.8);
     margin: 30px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#profile_pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 #name {
     grid-area: na;
-    background: rgba(39, 39, 49, 0.8);
+    background: white;
     margin: 30px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
 }
+
+#name h2 {
+    font-weight: 400;
+}
+
+#name h2 p {
+    font-size: 0.7em;
+    text-align: center;
+}
+
 
 #uppdate {
     grid-area: up;
-    background: rgba(39, 39, 49, 0.8);
+    background: white;
     margin: 30px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
+#uppdate button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background: #06c;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 5px 0px black;
+    transition: 0.2s;
+}
+
+#uppdate button:hover {
+    box-shadow: 1px 1px 2px 0px black;
+
+}
+
+#uppdate p {
+    text-align: center;
+    margin-top: 10px;
+}
 
 #recent {
     grid-area: rp;
-    background: rgba(39, 39, 49, 0.8);
+    background: white;
     margin: 30px;
     border-radius: 10px;
     display: flex;
@@ -207,25 +257,43 @@
 }
 
 .recent_champs {
-    background: rgba(0, 0, 0, 0.2);
-    height: 150px;
-    width: 43%;
+    background: #f5f5f7;
+    height: 80px;
+    width: 40%;
     border-radius: 5px;
 }
 
 #rank {
     grid-area: ra;
-    background: rgba(39, 39, 49, 0.8);
+    background: white;
     margin: 30px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
 }
+
+#rank img {
+    width: auto;
+    height: 90px;
+    padding-right: 10px;
+}
+
+#rank h3 {
+    font-size: 0.5;
+    text-align: center;
+    font-weight: 400;
+}
+
 
 #match_history {
     grid-area: ma;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: rgba(39, 39, 49, 0.8);
+    background: white;
     margin: 30px;
     border-radius: 10px;
     justify-content: space-evenly;
@@ -237,7 +305,7 @@
     width: 48%;
     height: 120px;
     border-radius: 5px;
-    background: rgba(0, 0, 0, 0.2);
+    background: #f5f5f7;
 }
 
 
